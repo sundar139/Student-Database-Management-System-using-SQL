@@ -49,7 +49,7 @@ def ViewNames():
         con=con = mysql.connector.connect(host="localhost",user="root",password="Pass1Word2")
         cur=con.cursor()
         cur.execute("use Project")
-        cur.execute("SELECT * FROM toc WHERE Firstname LIKE 'r%';")
+        cur.execute("SELECT * FROM toc WHERE Firstname LIKE 'a%';")
         row=cur.fetchall()
         con.close()       
         return row
@@ -57,7 +57,7 @@ def ViewMobile():
         con=con = mysql.connector.connect(host="localhost",user="root",password="Pass1Word2")
         cur=con.cursor()
         cur.execute("use Project")
-        cur.execute("SELECT * FROM toc WHERE Mobile LIKE '+91%';")
+        cur.execute("SELECT * FROM toc WHERE Mobile LIKE '+1%';")
         row=cur.fetchall()
         con.close()       
         return row
@@ -73,7 +73,7 @@ def ViewDoB():
         con=con = mysql.connector.connect(host="localhost",user="root",password="Pass1Word2")
         cur=con.cursor()
         cur.execute("use Project")
-        cur.execute("SELECT * FROM toc WHERE DoB LIKE '%2001';")
+        cur.execute("SELECT * FROM toc WHERE DoB LIKE '%2000';")
         row=cur.fetchall()
         con.close()       
         return row
@@ -81,7 +81,7 @@ def ViewGender():
         con=con = mysql.connector.connect(host="localhost",user="root",password="Pass1Word2")
         cur=con.cursor()
         cur.execute("use Project")
-        cur.execute("SELECT * FROM toc WHERE Gender LIKE 'm%';")
+        cur.execute("SELECT * FROM toc WHERE Gender LIKE 'f%';")
         row=cur.fetchall()
         con.close()       
         return row
