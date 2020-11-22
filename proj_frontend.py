@@ -73,6 +73,11 @@ class Student:
               studentlist.delete(0,END)
               for row in pb.ViewGender():
                   studentlist.insert(END,row)
+               
+       def DisplayID():
+              studentlist.delete(0,END)
+              for row in pb.ViewID():
+                  studentlist.insert(END,row)
 
        def StudentRec(event):
               global sd
@@ -236,6 +241,9 @@ class Student:
 
        self.btnGender=Button(ButtonFrame,text="Gender",font=('arial',20,'bold'),height=1,width=10,bd=4,fg="#555",command=DisplayGender)
        self.btnGender.grid(row=1,column=4)#GENDER
+       
+       self.btnID=Button(ButtonFrame,text="ID",font=('arial',20,'bold'),height=1,width=10,bd=4,fg="#555",command=DisplayID)
+       self.btnID.grid(row=1,column=5)#ID
 
 
 if __name__=='__main__':
