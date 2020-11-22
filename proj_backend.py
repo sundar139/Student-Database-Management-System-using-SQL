@@ -85,5 +85,13 @@ def ViewGender():
         row=cur.fetchall()
         con.close()       
         return row
+def ViewID():
+        con=con = mysql.connector.connect(host="localhost",user="root",password="Pass1Word2")
+        cur=con.cursor()
+        cur.execute("use Project")
+        cur.execute("SELECT * FROM toc WHERE StdID LIKE '2k18%';")
+        row=cur.fetchall()
+        con.close()       
+        return row
 
 
